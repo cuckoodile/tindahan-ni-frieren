@@ -7,24 +7,33 @@ from phonenumber_field.modelfields import PhoneNumberField
 # Create your models here.
 
 class CustomUser(AbstractUser):
+    date_joined = models.DateTimeField(auto_now_add=True)
+    is_active = models.BooleanField(default=True)
+
     middle_name = models.CharField(max_length=30, blank=True)
-    profile = models.ImageField(
+    profile_picture = models.ImageField(
         upload_to='profile/', 
         validators=[validate_file_size],
         help_text='Max file size is 5 MB',
         error_messages={
             'invalid': "Image files only with maximum of 5 MB."
         },
+        blank=True,
+        null=True,
         default='profile/default.jpg',
-        blank=True
     )
     phone_number = PhoneNumberField(
         region='PH',
         help_text="Philippine mobile number (e.g. +639123456789 or 09123456789)",
         error_messages={
             'invalid': "Enter a valid Philippine phone number."
-        }
+        },
+        blank=True,
+        null=True
     )
+
+    class Meta:
+        ordering = ['-date_joined', 'username']
 
 
     def save(self, *args, **kwargs):
@@ -36,3 +45,5 @@ class CustomUser(AbstractUser):
 
     def __str__(self):
         return self.username
+    
+    

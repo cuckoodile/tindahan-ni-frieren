@@ -25,12 +25,25 @@ from rest_framework_simplejwt.views import (
     TokenVerifyView
 )
 
+from accounts.views import *
+
 urlpatterns = [
     # Defaults
     path('admin/', admin.site.urls),
+        # Token
     path('api/login/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('api/verify/', TokenVerifyView.as_view(), name='token_verify'),
+
+    # User Endpoints
+        # GET
+    path('api/users/', UserListAPIView.as_view(), name='user_list_create'),
+    path('api/users/<int:pk>/', UserRetrieveUpdateDestroyView.as_view(), name='user_retrieve_update_destroy'),
+    path('api/profile/', OwnerListAPIView.as_view(), name='owner_profile'),
+        # POST
+    path('api/users/customer/', CustomerCreateAPIView.as_view(), name='customer_create'),
+    path('api/users/staff/', StaffCreateAPIView.as_view(), name='staff_create'),
+    path('api/users/admin/', AdminCreateAPIView.as_view(), name='admin_create'),
 ]
 
 if settings.DEBUG:
