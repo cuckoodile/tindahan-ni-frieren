@@ -115,6 +115,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# REST Framework Configuration
+# https://www.django-rest-framework.org/api-guide/settings/
 RESTFRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
@@ -124,6 +126,7 @@ RESTFRAMEWORK = {
     ),
 }
 
+# https://django-rest-framework-simplejwt.readthedocs.io/en/latest/settings.html
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME":  timedelta(days=1),
 }
