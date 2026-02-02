@@ -28,8 +28,8 @@ class CustomUser(AbstractUser):
         error_messages={
             'invalid': "Enter a valid Philippine phone number."
         },
-        blank=True,
-        null=True
+        blank=True,    # Application level (API Level)
+        null=False   # Database level
     )    # type: ignore
 
     class Meta:

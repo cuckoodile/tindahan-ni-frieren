@@ -12,6 +12,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         seeder = Seed.seeder(locale='en_PH')
+        # seeder = Seed.seeder()
 
         self.stdout.write(self.style.NOTICE("Starting user seeding..."))
 
@@ -40,19 +41,29 @@ class Command(BaseCommand):
         # ── 2. Super Users ────────────────────────────────────────────────────────
         seeder.add_entity(CustomUser, 1, {
             'username': 'admin',
-            'password': make_password('admin'),
+            'password': 'admin',
             'phone_number': lambda x: '+639' + seeder.faker.msisdn()[4:],
             'is_staff': True,
             'is_superuser': True,
             'is_active': True,
             'date_joined': timezone.now(),
-            'last_login': None,
+            'last_login': None, 
+            # 'groups': [admin_group]      <-- DO NOT do this
         })
+        # seeder.add_entity(Model, int {number of instances to be generated}, {
+        # OPTIONAL PARAMS.
+        # Define all field attributes you want to specify to hardcorded values
+        # })
+        # seeder.add_entity(Product, 10)
+
+        # seeder.add_entity(CustomUser, 0, {
+            
+        # })  
 
         seeder.add_entity(CustomUser, 1, {
             'username': 'fern',
             'password': make_password('fern'),
-            'phone_number': lambda x: '+639' + seeder.faker.msisdn()[4:],
+            'phone_number': lambda x: '+639' + seeder.faker.msisdn()[4:],   # () => {}
             'is_staff': True,
             'is_superuser': True,
             'is_active': True,
@@ -86,6 +97,8 @@ class Command(BaseCommand):
             admin_user = CustomUser.objects.get(username='admin')
             fern_user = CustomUser.objects.get(username='fern')
 
+            # Instance.{M2m Attr}.set([])
+            # Product.categories.set([cat1, cat2])
             admin_user.groups.set([admin_group])
             fern_user.groups.set([admin_group])
 
