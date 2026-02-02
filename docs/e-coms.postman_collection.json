@@ -1,0 +1,529 @@
+{
+  "info": {
+    "_postman_id": "498133bb-d2fa-4411-a047-a739ff033aa4",
+    "name": "e-coms",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "41346529"
+  },
+  "item": [
+    {
+      "name": "auth",
+      "item": [
+        {
+          "name": "login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "username",
+                  "value": "admin",
+                  "type": "text",
+                  "uuid": "537b536d-dd14-4a09-86a1-b425c39605f9"
+                },
+                {
+                  "key": "password",
+                  "value": "admin",
+                  "type": "text",
+                  "uuid": "45b8edb0-1fb0-447e-bfe2-e0965f9b5c1c"
+                },
+                {
+                  "key": "{{accessToken}}",
+                  "value": "{{refreshToken}}",
+                  "type": "text",
+                  "uuid": "f7e05a42-9996-42bf-9918-01e71343a497",
+                  "disabled": true
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{local_url}}/login/",
+              "host": [
+                "{{local_url}}"
+              ],
+              "path": [
+                "login",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Login Admin",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "username",
+                      "value": "admin",
+                      "type": "text",
+                      "uuid": "537b536d-dd14-4a09-86a1-b425c39605f9"
+                    },
+                    {
+                      "key": "password",
+                      "value": "admin",
+                      "type": "text",
+                      "uuid": "45b8edb0-1fb0-447e-bfe2-e0965f9b5c1c"
+                    },
+                    {
+                      "key": "{{accessToken}}",
+                      "value": "{{refreshToken}}",
+                      "type": "text",
+                      "uuid": "f7e05a42-9996-42bf-9918-01e71343a497",
+                      "disabled": true
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{local_url}}/login/",
+                  "host": [
+                    "{{local_url}}"
+                  ],
+                  "path": [
+                    "login",
+                    ""
+                  ]
+                }
+              },
+              "_postman_previewlanguage": null,
+              "header": null,
+              "cookie": [],
+              "body": null
+            },
+            {
+              "name": "Login Fern",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "username",
+                      "value": "fern",
+                      "type": "text",
+                      "uuid": "537b536d-dd14-4a09-86a1-b425c39605f9"
+                    },
+                    {
+                      "key": "password",
+                      "value": "Pass123!",
+                      "type": "text",
+                      "uuid": "45b8edb0-1fb0-447e-bfe2-e0965f9b5c1c"
+                    },
+                    {
+                      "key": "{{accessToken}}",
+                      "value": "{{refreshToken}}",
+                      "type": "text",
+                      "uuid": "f7e05a42-9996-42bf-9918-01e71343a497",
+                      "disabled": true
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{local_url}}/login/",
+                  "host": [
+                    "{{local_url}}"
+                  ],
+                  "path": [
+                    "login",
+                    ""
+                  ]
+                }
+              },
+              "_postman_previewlanguage": null,
+              "header": null,
+              "cookie": [],
+              "body": null
+            },
+            {
+              "name": "Login Stark",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "username",
+                      "value": "stark",
+                      "type": "text",
+                      "uuid": "537b536d-dd14-4a09-86a1-b425c39605f9"
+                    },
+                    {
+                      "key": "password",
+                      "value": "Pass123!",
+                      "type": "text",
+                      "uuid": "45b8edb0-1fb0-447e-bfe2-e0965f9b5c1c"
+                    },
+                    {
+                      "key": "{{accessToken}}",
+                      "value": "{{refreshToken}}",
+                      "type": "text",
+                      "uuid": "f7e05a42-9996-42bf-9918-01e71343a497",
+                      "disabled": true
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{local_url}}/login/",
+                  "host": [
+                    "{{local_url}}"
+                  ],
+                  "path": [
+                    "login",
+                    ""
+                  ]
+                }
+              },
+              "_postman_previewlanguage": null,
+              "header": null,
+              "cookie": [],
+              "body": null
+            },
+            {
+              "name": "Login as Customer",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "username",
+                      "value": "bradley33",
+                      "type": "text",
+                      "uuid": "537b536d-dd14-4a09-86a1-b425c39605f9"
+                    },
+                    {
+                      "key": "password",
+                      "value": "Pass123!",
+                      "type": "text",
+                      "uuid": "45b8edb0-1fb0-447e-bfe2-e0965f9b5c1c"
+                    },
+                    {
+                      "key": "{{accessToken}}",
+                      "value": "{{refreshToken}}",
+                      "type": "text",
+                      "uuid": "f7e05a42-9996-42bf-9918-01e71343a497",
+                      "disabled": true
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{local_url}}/login/",
+                  "host": [
+                    "{{local_url}}"
+                  ],
+                  "path": [
+                    "login",
+                    ""
+                  ]
+                }
+              },
+              "_postman_previewlanguage": null,
+              "header": null,
+              "cookie": [],
+              "body": null
+            }
+          ]
+        },
+        {
+          "name": "verify",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "token",
+                  "value": "{{accessToken}}",
+                  "type": "text",
+                  "uuid": "537b536d-dd14-4a09-86a1-b425c39605f9"
+                },
+                {
+                  "key": "token",
+                  "value": "{{refreshToken}}",
+                  "type": "text",
+                  "uuid": "eb4b22ce-2502-4e8f-bdb0-9e07afd9a160",
+                  "disabled": true
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{local_url}}/verify/",
+              "host": [
+                "{{local_url}}"
+              ],
+              "path": [
+                "verify",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "users",
+      "item": [
+        {
+          "name": "GET",
+          "item": [
+            {
+              "name": "List Users",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{local_url}}/users/",
+                  "host": [
+                    "{{local_url}}"
+                  ],
+                  "path": [
+                    "users",
+                    ""
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Retrieve User",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{local_url}}/users/{{id}}/",
+                  "host": [
+                    "{{local_url}}"
+                  ],
+                  "path": [
+                    "users",
+                    "{{id}}",
+                    ""
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Retrieve Profile",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{local_url}}/profile/",
+                  "host": [
+                    "{{local_url}}"
+                  ],
+                  "path": [
+                    "profile",
+                    ""
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "POST",
+          "item": [
+            {
+              "name": "Post User",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "username",
+                      "value": "fern",
+                      "type": "text",
+                      "uuid": "8ca6dcf1-a4ca-45eb-ada7-c21767eb793f"
+                    },
+                    {
+                      "key": "password",
+                      "value": "Pass123!",
+                      "type": "text",
+                      "uuid": "02e9bdc6-585b-4cb2-931e-787c667d690d"
+                    },
+                    {
+                      "key": "password_confirm",
+                      "value": "Pass123!",
+                      "type": "text",
+                      "uuid": "bb0bdfce-8e14-40b2-b17e-88bc889b5af8"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{local_url}}/users/customer/",
+                  "host": [
+                    "{{local_url}}"
+                  ],
+                  "path": [
+                    "users",
+                    "customer",
+                    ""
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Create Fern",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "formdata",
+                      "formdata": [
+                        {
+                          "key": "username",
+                          "value": "fern",
+                          "type": "text",
+                          "uuid": "8ca6dcf1-a4ca-45eb-ada7-c21767eb793f"
+                        },
+                        {
+                          "key": "password",
+                          "value": "Pass123!",
+                          "type": "text",
+                          "uuid": "02e9bdc6-585b-4cb2-931e-787c667d690d"
+                        },
+                        {
+                          "key": "password_confirm",
+                          "value": "Pass123!",
+                          "type": "text",
+                          "uuid": "bb0bdfce-8e14-40b2-b17e-88bc889b5af8"
+                        }
+                      ]
+                    },
+                    "url": {
+                      "raw": "{{local_url}}/users/customer/",
+                      "host": [
+                        "{{local_url}}"
+                      ],
+                      "path": [
+                        "users",
+                        "customer",
+                        ""
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "body": null
+                },
+                {
+                  "name": "Create Stark",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "formdata",
+                      "formdata": [
+                        {
+                          "key": "username",
+                          "value": "stark",
+                          "type": "text",
+                          "uuid": "8ca6dcf1-a4ca-45eb-ada7-c21767eb793f"
+                        },
+                        {
+                          "key": "password",
+                          "value": "Pass123!",
+                          "type": "text",
+                          "uuid": "02e9bdc6-585b-4cb2-931e-787c667d690d"
+                        },
+                        {
+                          "key": "password_confirm",
+                          "value": "Pass123!",
+                          "type": "text",
+                          "uuid": "bb0bdfce-8e14-40b2-b17e-88bc889b5af8"
+                        }
+                      ]
+                    },
+                    "url": {
+                      "raw": "{{local_url}}/users/customer/",
+                      "host": [
+                        "{{local_url}}"
+                      ],
+                      "path": [
+                        "users",
+                        "customer",
+                        ""
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "body": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{accessToken}}",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "accessToken",
+      "value": ""
+    },
+    {
+      "key": "refreshToken",
+      "value": ""
+    },
+    {
+      "key": "id",
+      "value": ""
+    },
+    {
+      "key": "local_url",
+      "value": ""
+    }
+  ]
+}
