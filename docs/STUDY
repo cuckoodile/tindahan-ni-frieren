@@ -1,0 +1,5 @@
+DJANGO
+    - Seeder/ Faker
+        - For development data automation
+    - Swagger (API Documentation)
+    - Aggregated query filter

@@ -30,7 +30,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(os.getenv('DEBUG'))
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',')
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',') # type: ignore
 
 CORS_ALLOW_ALL_ORIGINS = bool(os.getenv('ALLOWED_ORIGINS'))
 
@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'django_filters',
     'phonenumber_field',
+    'django_seed',
 
     # Apps
     'accounts',

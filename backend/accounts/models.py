@@ -30,7 +30,7 @@ class CustomUser(AbstractUser):
         },
         blank=True,
         null=True
-    )
+    )    # type: ignore
 
     class Meta:
         ordering = ['-date_joined', 'username']
